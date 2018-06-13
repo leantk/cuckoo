@@ -3,4 +3,4 @@ YAML testing
 
 Build Status for VSTS
 
-[![Build status](https://codedev.ms/KonradDEV/Testing1/_apis/build/status/Testing1-ASP.NET-CI)](https://codedev.ms/KonradDEV/Testing1/_apis/build/latest/Testing1-ASP.NET-CI)
+https://konradp.visualstudio.com/_apis/public/build/definitions/15fe61a0-7ce3-4ea3-8c44-f0691d97cc57/1/badge
