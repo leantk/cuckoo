@@ -1,2 +1,2 @@
 # cuckoo!
-YAML testing
+YAML testing!
