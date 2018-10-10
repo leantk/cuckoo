@@ -2,7 +2,7 @@
 
 pool:
   vmImage: 'Default'
-sdfsdf
+
 steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
