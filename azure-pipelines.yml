@@ -1,7 +1,7 @@
 # Starter pipeline!!!
 
 pool:
-  vmImage: 'Default'
+  vmImage: 'Hosted 2017'
 
 steps:
 - script: echo Hello, world!
