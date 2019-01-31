@@ -1,27 +1,11 @@
-# Update GitHub Releases with built artifacts
-pr: none
-trigger:
-  branches:
-    exclude:
-    - master
-  tags:
-    include:
-    - releases/*
+pr:
+- develop
+trigger: none
 
 pool:
   vmImage: 'Ubuntu-16.04'
 
 steps:
 - script: |
-    npm install
-    npm run build
-    set
-  displayName: 'npm install and build'
-
-- task: ArchiveFiles@2
-  inputs:
-    includeRootFolder: false
-    rootFolderOrFile: '$(build.sourcesDirectory)'
-    archiveFile: '$(build.artifactStagingDirectory)/$(build.sourceBranchName).zip'
-dsfsdfsdf
-
+    echo Running tests...
+displayName: 'Running extra tests...'
