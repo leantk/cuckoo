@@ -8,4 +8,3 @@ pool:
 steps:
 - script: |
     echo Running tests...
-displayName: 'Running extra tests...'
