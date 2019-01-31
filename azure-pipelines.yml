@@ -1,0 +1,32 @@
+# Update GitHub Releases with built artifacts
+pr: none
+trigger:
+  branches:
+    exclude:
+    - master
+  tags:
+    include:
+    - releases/*
+
+pool:
+  vmImage: 'Ubuntu-16.04'
+
+steps:
+- script: |
+    npm install
+    npm run build
+    set
+  displayName: 'npm install and build'
+
+- task: ArchiveFiles@2
+  inputs:
+    includeRootFolder: false
+    rootFolderOrFile: '$(build.sourcesDirectory)'
+    archiveFile: '$(build.artifactStagingDirectory)/$(build.sourceBranchName).zip'
+
+- task: GitHubRelease@0
+  inputs:
+    action: edit
+    gitHubConnection: 1ESDayReleases
+    repositoryName: AzureBoardsTeam/1ESDay
+tag: 'releases/$(build.sourceBranchName)'
