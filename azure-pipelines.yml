@@ -24,8 +24,3 @@ steps:
     rootFolderOrFile: '$(build.sourcesDirectory)'
     archiveFile: '$(build.artifactStagingDirectory)/$(build.sourceBranchName).zip'
 
-- task: GitHubRelease@0
-  inputs:
-    action: edit
-    gitHubConnection: 1ESDayReleases
-    repositoryName: AzureBoardsTeam/1ESDay
