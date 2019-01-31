@@ -29,4 +29,3 @@ steps:
     action: edit
     gitHubConnection: 1ESDayReleases
     repositoryName: AzureBoardsTeam/1ESDay
-tag: 'releases/$(build.sourceBranchName)'
