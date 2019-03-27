@@ -2,8 +2,7 @@ pr:
 - develop
 trigger: none
 
-pool:
-  vmImage: 'Ubuntu-16.04'
+pool: default
 
 steps:
 - script: |
