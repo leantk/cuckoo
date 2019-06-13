@@ -1,19 +1,25 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
+on:
+  push:
+    branches: "*"
 
-trigger:
-- master
+jobs:
 
-pool:
-  vmImage: 'ubuntu-latest'
+  hello:
 
-steps:
-- script: echo IT WORKS!
-  displayName: 'Run a one-line script'
+    # Matrix
+    strategy:
+      matrix:
+        pool: [ DLLinux ]
+        
+    # Display name
+    name: Hello ${{ matrix.pool }}
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+    # Pool
+    runs-on:
+      pool: ${{ matrix.pool }}
+
+    actions:
+
+      # Hello script
+      - name: Hello
+run: echo hello from ${{ matrix.pool }}
